@@ -1,14 +1,15 @@
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap);
-html {
+* {
   box-sizing: border-box;
 }
 body {
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
   background-color: hsl(233, 47%, 7%);
   color: white;
 }
+/* Outer container for the elements */
 .container {
   position: absolute;
   top: 50%;
@@ -25,18 +26,21 @@ body {
   overflow: hidden;
   border-radius: 0.8rem;
 }
+/* The left div of the container (when viewed from desktop version) */
 .left {
   margin: 3rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+/* Header in the left part */
 header {
   font-family: "Inter", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.4rem;
 }
+/* The para in the left part */
 .info {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 400;
@@ -46,25 +50,162 @@ header {
   /* word-spacing: 0.1rem; */
   text-align: left;
 }
+/* The stats unordered list to hold the list items in the left div */
 .stats {
+  list-style-type: none;
   width: 100%;
   margin-top: 2.5rem;
+  margin-left: 0;
   display: flex;
   flex-direction: row;
-
-  justify-content: space-between;
+  padding: 0px;
+  justify-content: flex-start;
   text-transform: uppercase;
 }
+/* The no.s in each stat */
+.stats strong {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+/* Each of the stat in stats */
 .stat {
-  width: 5rem;
+  width: 30%;
   font-family: "Lexend Deca", sans-serif;
   color: hsla(0, 0%, 100%, 0.75);
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
 }
+/* right div to represent the right part of the container (when viewed from desktop version) */
 .right {
   display: flex;
   align-items: stretch;
   background-color: hsl(277, 64%, 61%);
-  mix-blend-mode: overlay;
+}
+/* The image in the right div */
+.right img {
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+}
+/* Media queries for the reponsiveness (just edited the code used above); 
+used two media queries one for tablets and the other for phones;
+above code works for desktops only  */
+@media (max-width: 1200px) {
+  .container {
+    margin-top: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    margin: auto;
+    padding: 0;
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    text-align: center;
+  }
+  .left {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .info {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 0.75);
+    width: 100%;
+    line-height: 1.75rem;
+    /* word-spacing: 0.1rem; */
+    text-align: center;
+  }
+  .right {
+    display: flex;
+    justify-content: stretch;
+    background-color: hsl(277, 64%, 61%);
+    width: 100%;
+  }
+  .stats {
+    list-style-type: none;
+    width: 100%;
+    margin-top: 2.5rem;
+    /* margin-left: 0; */
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .stats strong {
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  .stat {
+    width: 30%;
+    font-family: "Lexend Deca", sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    margin: 1rem 0;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    margin: auto;
+    padding: 0;
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    text-align: center;
+  }
+  .right {
+    display: flex;
+    justify-content: stretch;
+    background-color: hsl(277, 64%, 61%);
+    width: 100%;
+  }
+  .stats {
+    list-style-type: none;
+    width: 100%;
+    margin-top: 2.5rem;
+    /* margin-left: 0; */
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .stats strong {
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  .stat {
+    width: 30%;
+    font-family: "Lexend Deca", sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    margin: 1rem 0;
+  }
 }
