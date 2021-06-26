@@ -134,7 +134,7 @@ header {
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
     color: hsla(0, 0%, 100%, 0.75);
-    width: 70%;
+    width: 100%;
     line-height: 1.75rem;
     /* word-spacing: 0.1rem; */
     text-align: center;
@@ -153,7 +153,7 @@ header {
     text-align: center;
   }
   .stat {
-    width: 30%;
+    width: 100%;
     font-family: "Lexend Deca", sans-serif;
     color: hsla(0, 0%, 100%, 0.75);
     font-size: 0.8rem;
